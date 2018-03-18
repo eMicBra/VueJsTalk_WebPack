@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <h1>{{msg}}</h1>
-    <img src="./assets/logo.png">
+    <app-nav/>
     <route-info/>
+    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
-import routeInfo from './components/RouteInfo'
+import appNav from '@/components/AppNav'
+import routeInfo from '@/components/RouteInfo'
 export default {
   name: 'App',
   components: {
+    appNav,
     routeInfo
   },
   data() {
