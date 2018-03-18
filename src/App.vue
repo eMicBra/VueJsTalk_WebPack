@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>{{msg}}</h1>
     <img src="./assets/logo.png">
     <route-info/>
     <router-view/>
@@ -12,6 +13,11 @@ export default {
   name: 'App',
   components: {
     routeInfo
+  },
+  data() {
+    return {
+      msg: 'Welcome to Vue.js'
+    };
   },
 }
 </script>
