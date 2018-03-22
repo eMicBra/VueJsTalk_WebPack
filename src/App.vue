@@ -2,8 +2,12 @@
   <div id="app">
     <h1>{{msg}}</h1>
     <app-nav/>
-    <route-info/>
+    <route-info :routeName="routeName" :routePath="routePath">
+      Route Name: {{routeName}}, Route Path: {{routePath}}
+    </route-info>
     <img src="./assets/logo.png">
+
+    <!--component defined in route displays here-->
     <router-view/>
   </div>
 </template>
@@ -22,6 +26,14 @@ export default {
       msg: 'Welcome to Vue.js'
     };
   },
+  computed: {
+    routeName() {
+      return this.$route.name;
+    },
+    routePath(){
+      return this.$route.path;
+    }
+  }
 }
 </script>
 
