@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import EssentialLinks from '@/components/EssentialLinks'
 import EcoSystemLinks from '@/components/EcoSystemLinks'
+import ToDoList from '../components/ToDoList'
 
 export const routes = [
   {
@@ -21,6 +22,12 @@ export const routes = [
     path: '/ecosystem-links',
     component: EcoSystemLinks,
     display: 'Vue.js Ecosystem' 
+  },
+  {
+    name: 'to_do_list',
+    path: '/to-do-list',
+    component: ToDoList,
+    display: 'To Do List' 
   }
 ]
 
